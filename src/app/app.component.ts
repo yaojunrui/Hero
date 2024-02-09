@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Hero } from './heroes/hero';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Hero';
+  title = 'Tour of Heroes';
+  onSelect(e) {
+    console.log("select hero.")
+    this.hero = e
+  }
+  hero: Hero
 }
